@@ -25,10 +25,10 @@ const COLORS = [
   '#9DC8F3',
   '#C5DDF8',
 ];
-export default function DonutChartCard({ title, data }) {
+export default function DonutChartCard({ event_name }) {
   const centerLabel = (
     <Label
-      value={data ? data.reduce((sum, entry) => sum + entry.value, 0) : ''}
+      value={'Events'}
       position='center'
       style={{ fontSize: '18px', fontWeight: 'bold', fill: '#231F20' }}
     />
@@ -36,7 +36,7 @@ export default function DonutChartCard({ title, data }) {
   return (
     <div className='w-full lg:w-[49.3%] p-6 shadow-sm rounded-lg border border-[#E2E2E2] h-[300px]'>
       <div className='flex justify-between  items-center'>
-        <h6 className='font-semibold text-base text-[#231F20]'>{title}</h6>
+        <h6 className='font-semibold text-base text-[#231F20]'>Event 1</h6>
         {/* <FiMoreVertical role='button' className='w-5 h-5 text-[#B4B5B6]' /> */}
       </div>
       <ResponsiveContainer>

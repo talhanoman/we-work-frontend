@@ -4,28 +4,32 @@
       "event_code": "EVT001",
       "start_date": "2024-04-10",
       "end_date": "2024-04-12",
-      "venue_name": "London, UK"
+      "venue_name": "London, UK",
+      "Headcount" : 34
     },
     {
       "event_name": "Event 2",
       "event_code": "EVT002",
       "start_date": "2024-04-15",
       "end_date": "2024-04-17",
-      "venue_name": "Liverpool, UK"
+      "venue_name": "Liverpool, UK",
+      "Headcount" : 12
     },
     {
       "event_name": "Event 3",
       "event_code": "EVT003",
       "start_date": "2024-04-20",
       "end_date": "2024-04-22",
-      "venue_name": "Manchester, UK"
+      "venue_name": "Manchester, UK",
+      "Headcount" : 22
+
     },
     {
       "event_name": "Event 4",
       "event_code": "EVT004",
       "start_date": "2024-04-25",
       "end_date": "2024-04-27",
-      "venue_name": "Multan, PK"
+      "venue_name": "Multan, PK",
+      "Headcount" : 56
     }
   ]
-  

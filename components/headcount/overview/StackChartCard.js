@@ -1,14 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { FiMoreVertical } from 'react-icons/fi';
+
 import CheckboxMultiSelect from '../../checkbox-multiselect';
 import { Tab } from '@headlessui/react';
 import StackChart from './StackChart';
-import {
-  getEventCount,
-  getDepartmentCount,
-  getRoleCount,
-  getFunctionCount,
-} from '@/pages/api/get';
+
 
 const column_options = [];
 
@@ -25,6 +20,38 @@ const data = [
   { name: 'I', x: 19, y: 43, z: 93 },
 ];
 
+
+// Mock data for event count
+const eventCountData = [
+  { Name: 'Event A', Count: 50 },
+  { Name: 'Event B', Count: 30 },
+  { Name: 'Event C', Count: 20 },
+  { Name: 'Event D', Count: 40 },
+  { Name: 'Event E', Count: 60 },
+];
+
+// Mock data for department count
+const departmentCountData = [
+  { Name: 'Department X', Count: 100 },
+  { Name: 'Department Y', Count: 80 },
+  { Name: 'Department Z', Count: 120 },
+];
+
+// Mock data for role count
+const roleCountData = [
+  { Name: 'Role 1', Count: 70 },
+  { Name: 'Role 2', Count: 90 },
+  { Name: 'Role 3', Count: 110 },
+];
+
+// Mock data for function count
+const functionCountData = [
+  { Name: 'Function A', Count: 50 },
+  { Name: 'Function B', Count: 30 },
+  { Name: 'Function C', Count: 20 },
+  { Name: 'Function D', Count: 40 },
+];
+
 export default function MultibarChartCard({ title }) {
   const [selectWithBadge, setSelectWithBadge] = useState([]);
   const [eventCount, setEventCount] = useState([]);
@@ -35,7 +62,8 @@ export default function MultibarChartCard({ title }) {
   const [eventCheck, setEventCheck] = useState(false)
 
   useEffect(() => {
-    getEventData(), getDepartmentData(), getFunctionData(), getRoleData();
+    getEventData(),
+     getDepartmentData(), getFunctionData(), getRoleData();
   }, []);
 
 
@@ -52,41 +80,25 @@ export default function MultibarChartCard({ title }) {
   }, [eventCount])
 
   const getEventData = async () => {
-    let res = await getEventCount();
-    let { valid, data } = res;
-    if (valid) {
-      let myData = []
-      data?.map((obj) => {
-        let newObj = obj
-        newObj.IsChecked = false
-        myData.push(newObj)
-      })
-      setEventCount(myData);
-    }
+   
+      setEventCount(eventCountData);
+   
   };
 
   const getDepartmentData = async () => {
-    let res = await getDepartmentCount();
-    let { valid, data } = res;
-    if (valid) {
-      setDepartmentCount(data);
-    }
+   
+      setDepartmentCount(departmentCountData);
+   
   };
 
   const getRoleData = async () => {
-    let res = await getRoleCount();
-    let { valid, data } = res;
-    if (valid) {
-      setroleCount(data);
-    }
+    
+      setroleCount(roleCountData);
+    
   };
 
-  const getFunctionData = async () => {
-    let res = await getFunctionCount();
-    let { valid, data } = res;
-    if (valid) {
-      setfunctionCount(data);
-    }
+  const getFunctionData = async () => {    
+      setfunctionCount(functionCountData);    
   };
   const handleSelectWithBadge = (option) => {
     setSelectWithBadge(option);

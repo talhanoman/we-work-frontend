@@ -87,7 +87,7 @@ const getWorkforceCount = async () => {
 }
 
 const getEventCount = async () => {
-  return fetch(`${AM_HOST}/getEventCount`, {
+  return fetch(`/dummy-data/events.json`, {
     headers: {
       'Content-Type': 'application/json'
     }

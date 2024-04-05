@@ -25,17 +25,15 @@ function OverviewTab() {
   };
 
   const getEventData = async () => {
-    // let res = await getEventCount();
-    // let data = res;
-    
-    //   console.log(data);
-    //   const eventData = data
-    //     ?.filter((item) => item.Headcount !== 0)
-    //     .map((item) => ({
-    //       name: item.Name,
-    //       value: item.Headcount,
-    //     }));
-    //   setEventCount(eventData);
+    let res = await getEventCount();
+    let data = res;          
+      const eventData = data
+        ?.filter((item) => item.Headcount !== 0)
+        .map((item) => ({
+          name: item.event_name,
+          value: item.Headcount,
+        }));
+      setEventCount(eventData);
     
   };
 

@@ -11,37 +11,26 @@ import {
   CartesianGrid,
 } from 'recharts';
 
-const StackChart = ({ xAxisLabel, data }) => {
+const StackChart = ({ xAxisLabel }) => {
   // Sample data
-  // const data = [
-  //     { name: 'A', 'Paid Staff': 12, 'Volunteers': 23, 'Contractors': 122 },
-  //     { name: 'B', 'Paid Staff': 22, 'Volunteers': 3, 'Contractors': 73 },
-  //     { name: 'C', 'Paid Staff': 13, 'Volunteers': 15, 'Contractors': 32 },
-  //     { name: 'D', 'Paid Staff': 44, 'Volunteers': 35, 'Contractors': 23 },
-  //     { name: 'E', 'Paid Staff': 35, 'Volunteers': 45, 'Contractors': 20 },
-  //     { name: 'F', 'Paid Staff': 62, 'Volunteers': 25, 'Contractors': 29 },
-  //     { name: 'G', 'Paid Staff': 37, 'Volunteers': 17, 'Contractors': 61 },
-  //     { name: 'H', 'Paid Staff': 28, 'Volunteers': 32, 'Contractors': 45 },
-  //     { name: 'I', 'Paid Staff': 19, 'Volunteers': 43, 'Contractors': 93 },
-  // ];
+  const data = [
+      { name: 'A', 'Paid Staff': 12, 'Volunteers': 23, 'Contractors': 122 },
+      { name: 'B', 'Paid Staff': 22, 'Volunteers': 3, 'Contractors': 73 },
+      { name: 'C', 'Paid Staff': 13, 'Volunteers': 15, 'Contractors': 32 },
+      { name: 'D', 'Paid Staff': 44, 'Volunteers': 35, 'Contractors': 23 },
+      { name: 'E', 'Paid Staff': 35, 'Volunteers': 45, 'Contractors': 20 },
+      { name: 'F', 'Paid Staff': 62, 'Volunteers': 25, 'Contractors': 29 },
+      { name: 'G', 'Paid Staff': 37, 'Volunteers': 17, 'Contractors': 61 },
+      { name: 'H', 'Paid Staff': 28, 'Volunteers': 32, 'Contractors': 45 },
+      { name: 'I', 'Paid Staff': 19, 'Volunteers': 43, 'Contractors': 93 },
+  ];
 
-  const transformedData = data
-    ?.filter((item) => {
-      return !(
-        item.IsChecked === false
-      );
-    })
-    .map((item) => ({
-      name: item.Name,
-      Contractors: item.Contractor,
-      'Paid Staff': item.PaidStaff,
-      Volunteers: item.Volunteer,
-    }));
+ 
 
   return (
     <div className='w-full ' style={{ width: '100%', height: 300 }}>
       <ResponsiveContainer>
-        <BarChart data={transformedData} maxBarSize={40}>
+        <BarChart data={data} maxBarSize={40}>
           <XAxis dataKey='name'>
             <Label value={xAxisLabel} offset={-2} position='insideBottom' />
           </XAxis>
