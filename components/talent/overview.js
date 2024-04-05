@@ -1,0 +1,18 @@
+import React, { useEffect } from "react";
+
+
+function OverviewTab() {
+
+  useEffect(() => {
+  }, []);
+
+
+  return (
+    <div className="w-full h-[calc(100vh-249px)] overflow-y-auto rounded-bl-[40px] bg-gray-50 px-8 pb-16">
+      <h6 className="font-semibold">Overview</h6>
+    </div>
+  );
+}
+
+export default OverviewTab;
+

@@ -1,0 +1,12 @@
+/* FF614C */
+
+.rbc-day-bg.rbc-today
+{
+    background-color:  #FF614C;    
+}
+
+.rbc-date-cell.rbc-now.rbc-current > button
+{
+    background-color:  #FF614C;    
+    color: #FFFFFF;
+}

@@ -1,0 +1,143 @@
+import React, { useState } from "react";
+import CandidateSignupFooter from "@/components/candidate-signup-footer";
+import { useRouter } from "next/router";
+import ProgressBar from "@/components/progress-bar";
+import Logo from "@/components/logo";
+import ProgressCardProfessionals from "@/components/progress-card-professionals";
+
+const initial_form_data = {
+  email: "",
+  emailValid: false,
+};
+
+export default function EmailAddress() {
+  const [formData, setFormData] = useState(initial_form_data);
+  const router = useRouter();
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+      [`${name}Valid`]: value !== "" && /\S+@\S+\.\S+/.test(value),
+    });
+  };
+
+  return (
+    <div className="flex h-screen bg-gray-800">
+      {/* Left Section */}
+      <div className="w-4/12">
+        {/* Nav featured card */}
+        <ProgressCardProfessionals progress={2} />
+      </div>
+
+      {/* Right Section */}
+      <div className="relative w-8/12 flex flex-col bg-white rounded-l-[40px]">
+        {/* Logo */}
+        <Logo
+          src={"crowd-work-vertical-logo"}
+          alt={"Company Logo"}
+          className={"absolute left-0 top-8 custom-height-mq:h-[60px] sm:h-[94px]"}
+        />
+        {/* Email */}
+        <div className="w-full h-screen max-w-[512px] mx-auto flex flex-col justify-center gap-y-8">
+          <div className="space-y-3">
+            <h1 className="text-display-xs-semibold 2xl:text-display-sm-semibold text-gray-900">
+              What's your{" "}
+              <span className="text-primary-700">email address</span>?
+            </h1>
+            <p className="text-sm-regular 2xl:text-md-regular text-gray-700">
+              Don't worry, we won't spam you - we just need it to keep you
+              updated on all the exciting opportunities.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* Form */}
+            <form action="">
+              {/* Email Row */}
+              <div className="w-full">
+                <label className="text-gray-700 text-xs-medium 2xl:text-sm-medium" htmlFor="email">
+                  Email<span className="text-primary-600">*</span>
+                  <div className="relative">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="Email"
+                      required
+                      className={`w-full h-11 block text-gray-900 text-sm-regular 2xl:text-md-regular rounded-lg border border-gray-300 mt-1.5 px-3.5 py-2.5 focus:ring-1 focus:ring-primary-600 outline-none shadow-xs placeholder:text-gray-500`}
+                    />
+
+                    {formData.emailValid && (
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="absolute ml-2 top-3.5 right-3.5"
+                      >
+                        <rect
+                          x="0.5"
+                          y="0.5"
+                          width="15"
+                          height="15"
+                          rx="7.5"
+                          fill="#2F68D6"
+                        />
+                        <path
+                          d="M11.3332 5.5L6.74984 10.0833L4.6665 8"
+                          stroke="white"
+                          strokeWidth="1.66667"
+                          strokeLinecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <rect
+                          x="0.5"
+                          y="0.5"
+                          width="15"
+                          height="15"
+                          rx="7.5"
+                          stroke="#2F68D6"
+                        />
+                      </svg>
+                    )} 
+                  </div>
+                </label>
+              </div>
+            </form>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row sm:justify-between gap-3">
+              <button
+                className="w-full h-11 flex justify-center items-center flex-1 order-2 sm:order-1 text-sm-semibold 2xl:text-md-semibold border border-gray-300 bg-white rounded-lg text-gray-700 py-2.5 shadow-xs"
+                onClick={() => router.back()}
+              >
+                Back
+              </button>
+              <button
+                className="h-11 py-2.5 flex justify-center items-center flex-1 order-1 sm:order-2 text-sm-semibold 2xl:text-md-semibold border border-primary-600 bg-primary-600 text-white rounded-lg disabled:pointer-events-none disabled:opacity-75 shadow-xs"
+                disabled={!(formData.emailValid)}
+                onClick={() => router.push("/professionals-form/phone-number")}
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+
+          <ProgressBar progress={10} width="w-full max-w-[320px] mx-auto" />
+        </div>
+
+        {/* Footer */}
+        <CandidateSignupFooter
+          company={"© Weteck Events Ltd. 2024"}
+          email_id={"hello@crowdedevents.com"}
+        />
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,12 @@
+.input-checkbox:checked {
+    background-image: url("/images/check-icon.svg") !important;
+}
+
+.input-checkbox-minus {
+    background-image: url("/images/minus.svg") !important;
+    background-size: 14px 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #F1F6FD;
+    border-color: #2F68D6;
+}

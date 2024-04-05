@@ -1,0 +1,53 @@
+{
+  "name": "crowd-tonic-microservice-front-end",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.13",
+    "@heroicons/react": "^2.0.16",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tiptap/extension-color": "^2.1.12",
+    "@tiptap/extension-highlight": "^2.1.12",
+    "@tiptap/extension-link": "^2.1.12",
+    "@tiptap/extension-text-style": "^2.1.12",
+    "@tiptap/extension-underline": "^2.1.12",
+    "@tiptap/pm": "^2.1.12",
+    "@tiptap/react": "^2.1.12",
+    "@tiptap/starter-kit": "^2.1.12",
+    "country-list-with-dial-code-and-flag": "^3.0.2",
+    "date-fns": "^2.30.0",
+    "exceljs": "^4.3.0",
+    "fs": "^0.0.1-security",
+    "html-react-parser": "^4.2.9",
+    "mapbox-gl": "^2.13.0",
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-big-calendar": "^1.8.1",
+    "react-date-range": "^1.4.0",
+    "react-datepicker": "^4.11.0",
+    "react-dom": "18.2.0",
+    "react-flag-kit": "^1.1.1",
+    "react-icons": "^4.8.0",
+    "react-international-phone": "^3.1.2",
+    "react-map-gl": "^7.0.21",
+    "react-quill": "^2.0.0",
+    "react-time-picker": "^6.5.2",
+    "react-tooltip": "^5.11.1",
+    "recharts": "^2.6.2",
+    "tailwind-scrollbar": "^3.0.0",
+    "universal-cookie": "^4.0.4",
+    "xlsx": "^0.18.5",
+    "xlsx-style": "^0.8.13"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  }
+}
