@@ -107,23 +107,18 @@ export default function LogIn() {
       {/* Left Section */}
       <div className="w-[54%] bg-gray-700 flex justify-center text-white h-screen bg-[url('../public/images/signin-bg-img.png')] bg-no-repeat bg-cover">
         <div className="relative w-full mr-[7.2%]">
-          {/* Logo */}
-          <Logo
-            src={"crowd-work-vertical-white-logo"}
-            alt={"Company Logo"}
-            className={"absolute left-0 top-16 custom-height-mq:top-8 custom-height-mq:h-[60px] sm:h-[94px]"}
-          />
+
           <div className="w-full max-w-[485px] mx-auto flex h-full flex-col justify-center">
             <h1 className="text-display-sm-regular xl:text-display-md-regular 2xl:text-display-lg-regular text-center sm:text-left">
               <span className="font-bold tracking-[-2%]">
-                Streamline Your Event Planning with CROWD
+                Streamline Your Event Planning with WE
               </span>
-              WRK
+              WORK
             </h1>
 
             <h3 className="text-lg-medium 2xl:text-display-xs-medium mt-6 text-center sm:text-left">
               Say goodbye to inefficient planning and execution -{" "}
-              <span className="font-bold">CROWD</span>WRK is designed to
+              <span className="font-bold">WE</span>WORK is designed to
               simplify every step of your event planning process.
             </h3>
 
