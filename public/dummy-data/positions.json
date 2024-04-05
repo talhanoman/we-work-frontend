@@ -1,0 +1,50 @@
+
+     [
+      {
+        "position_code": "POS001",
+        "event_name": "Event 1",
+        "department_name": "Marketing",
+        "function_name": "Promotions",
+        "role_name": "Promoter",
+        "role_workforce_type": "Part-time",
+        "start_date": "2024-04-10",
+        "end_date": "2024-04-15",
+        "report_to_role_name": "Supervisor",
+        "venue_name": "Venue 1",
+        "shift_per_day": 2,
+        "total_demand": 50,
+        "peak_shift": 20
+      },
+      {
+        "position_code": "POS002",
+        "event_name": "Event 2",
+        "department_name": "Operations",
+        "function_name": "Logistics",
+        "role_name": "Logistics Coordinator",
+        "role_workforce_type": "Full-time",
+        "start_date": "2024-05-01",
+        "end_date": "2024-05-05",
+        "report_to_role_name": "Manager",
+        "venue_name": "Venue 2",
+        "shift_per_day": 3,
+        "total_demand": 30,
+        "peak_shift": 15
+      },
+      {
+        "position_code": "POS003",
+        "event_name": "Event 3",
+        "department_name": "Sales",
+        "function_name": "Customer Service",
+        "role_name": "Sales Representative",
+        "role_workforce_type": "Part-time",
+        "start_date": "2024-06-01",
+        "end_date": "2024-06-10",
+        "report_to_role_name": "Team Leader",
+        "venue_name": "Venue 3",
+        "shift_per_day": 2,
+        "total_demand": 40,
+        "peak_shift": 25
+      }
+    ]
+
+  

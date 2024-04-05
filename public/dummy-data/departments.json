@@ -1,0 +1,24 @@
+[
+    {
+      "department_name": "Department X",
+      "department_code": "DX001",
+      "department_venue": "Venue X",
+      "event_name": "Event X",
+      "event_guid": "event_guid_1"
+    },
+    {
+      "department_name": "Department Y",
+      "department_code": "DY002",
+      "department_venue": "Venue Y",
+      "event_name": "Event Y",
+      "event_guid": "event_guid_2"
+    },
+    {
+      "department_name": "Department Z",
+      "department_code": "DZ003",
+      "department_venue": "Venue Z",
+      "event_name": "Event Z",
+      "event_guid": "event_guid_3"
+    }
+  ]
+  

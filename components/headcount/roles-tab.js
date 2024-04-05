@@ -129,7 +129,7 @@ function RolesTab() {
             ?.map((item) => ({
               name: item.workforce_type,
               isChecked: false,
-            })),  
+            })),
         },
         {
           title: 'Function Name',
@@ -153,27 +153,24 @@ function RolesTab() {
 
   const getMyFunctions = async () => {
     let res = await getFunction();
-    let { valid, data } = res;
-    if (valid) {
-      let options = [];
-      data?.map((obj) => {
-        let item = {
-          value: obj.function_guid,
-          label: obj.function_name,
-        };
+    let data = res;
 
-        options.push(item);
-      });
-      setFunctions(options);
-    }
+    let options = [];
+    data?.map((obj) => {
+      let item = {
+        value: obj.function_guid,
+        label: obj.function_name,
+      };
+
+      options.push(item);
+    });
+    setFunctions(options);
+
   };
 
   const getMyRoles = async () => {
     let res = await getRole();
-    let { valid, data } = res;
-    if (valid) {
-      setRoles(data);
-    }
+    setRoles(res);
   };
 
   const changeAttatchment = React.useRef(null);
@@ -331,9 +328,8 @@ function RolesTab() {
       />
 
       <div
-        className={`w-full h-[calc(100vh-203px)] ${
-          !roles && 'flex items-center'
-        } overflow-y-auto rounded-bl-[40px] bg-gray-50 px-8 pt-8 pb-16 space-y-6`}
+        className={`w-full h-[calc(100vh-203px)] ${!roles && 'flex items-center'
+          } overflow-y-auto rounded-bl-[40px] bg-gray-50 px-8 pt-8 pb-16 space-y-6`}
       >
         {/* Job Board form */}
         {roles && (
@@ -694,7 +690,7 @@ function RolesTab() {
                 <div className='w-full flex flex-row justify-between gap-3'>
                   <button
                     className='h-11 text-xs-semibold 2xl:text-sm-semibold text-gray-700 px-4 py-2.5 flex justify-center items-center flex-1 border border-gray-300 bg-white rounded-lg shadow-xs'
-                    // onClick={}
+                  // onClick={}
                   >
                     Support article
                   </button>

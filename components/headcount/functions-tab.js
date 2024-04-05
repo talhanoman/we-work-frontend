@@ -200,10 +200,9 @@ function FunctionsTab() {
   };
   const getMyFunctions = async () => {
     let res = await getFunction();
-    let { valid, data } = res;
-    if (valid) {
-      setFunctions(data);
-    }
+        
+      setFunctions(res);
+    
   };
 
   const changeAttatchment = React.useRef(null);

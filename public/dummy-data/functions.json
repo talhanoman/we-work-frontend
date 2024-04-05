@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "function_name": "Production Management",
+      "function_id": "PDM",
+      "function_description": "Responsible for managing production processes and ensuring efficient manufacturing operations.",
+      "event_name": "Annual Conference",
+      "department_name": "Operations"
+    },
+    {
+      "id": 2,
+      "function_name": "Logistics and Transportation",
+      "function_id": "LOG",
+      "function_description": "Oversees transportation logistics, including shipping, warehousing, and distribution.",
+      "event_name": "Supply Chain Summit",
+      "department_name": "Logistics"
+    },
+    {
+      "id": 3,
+      "function_name": "Technical Services",
+      "function_id": "TES",
+      "function_description": "Provides technical support and services to customers, ensuring optimal product performance.",
+      "event_name": "Tech Expo",
+      "department_name": "Customer Support"
+    },
+    {
+      "id": 4,
+      "function_name": "Set Design and Construction",
+      "function_id": "SDC",
+      "function_description": "Designs and constructs sets for various events and productions, ensuring creative and functional designs.",
+      "event_name": "Entertainment Showcase",
+      "department_name": "Creative Services"
+    }
+  ]
+  

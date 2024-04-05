@@ -125,11 +125,8 @@ function VenuesTab() {
   }, [venues]);
 
   const getMyVenues = async () => {
-    let res = await getVenue();
-    let { valid, data } = res;
-    if (valid) {
-      setVenues(data);
-    }
+    let res = await getVenue();      
+      setVenues(res);   
   };
 
   useEffect(() => {

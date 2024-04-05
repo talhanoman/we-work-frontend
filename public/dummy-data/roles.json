@@ -1,0 +1,27 @@
+[
+    {
+      "role_name": "Software Engineer",
+      "role_description": "Develop and maintain software applications",
+      "role_code": "SE001",
+      "workforce_type": "Full-time",
+      "function_name": "Engineering",
+      "FunctionGUID": "12345"
+    },
+    {
+      "role_name": "Product Manager",
+      "role_description": "Manage product development lifecycle",
+      "role_code": "PM001",
+      "workforce_type": "Full-time",
+      "function_name": "Product Management",
+      "FunctionGUID": "67890"
+    },
+    {
+      "role_name": "Data Analyst",
+      "role_description": "Analyze and interpret data to inform business decisions",
+      "role_code": "DA001",
+      "workforce_type": "Contract",
+      "function_name": "Data Analytics",
+      "FunctionGUID": "54321"
+    }
+  ]
+  

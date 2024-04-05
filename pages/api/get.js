@@ -2,7 +2,7 @@ const AUTH_HOST = process.env.IS_LOCAL ? "http://localhost:" + process.env.AUTH_
 const AM_HOST = process.env.IS_LOCAL ? "http://localhost:" + process.env.ACCOUNT_PORT : process.env.LIVE_LINK + process.env.ACCOUNT_PORT
 //Get
 const getDepartment = async () => {
-  return fetch(`${AM_HOST}/getDepartment`, {
+  return fetch(`/dummy-data/departments.json`, {
     headers: {
       'Content-Type': 'application/json'
     }
@@ -14,7 +14,7 @@ const getDepartment = async () => {
 }
 
 const getFunction = async () => {
-  return fetch(`${AM_HOST}/getFunction`, {
+  return fetch(`/dummy-data/functions.json`, {
     headers: {
       'Content-Type': 'application/json'
     }
@@ -26,7 +26,7 @@ const getFunction = async () => {
 }
 
 const getRole = async () => {
-  return fetch(`${AM_HOST}/getRole`, {
+  return fetch(`/dummy-data/roles.json`, {
     headers: {
       'Content-Type': 'application/json'
     }
@@ -50,7 +50,7 @@ const getEvent = async () => {
 }
 
 const getVenue = async () => {
-  return fetch(`${AM_HOST}/getVenue`, {
+  return fetch(`/dummy-data/venues.json`, {
     headers: {
       'Content-Type': 'application/json'
     }
@@ -62,7 +62,7 @@ const getVenue = async () => {
 }
 
 const getPosition = async () => {
-  return fetch(`${AM_HOST}/getPositionsData`, {
+  return fetch(`/dummy-data/positions.json`, {
     headers: {
       'Content-Type': 'application/json'
     }

@@ -117,10 +117,8 @@ function DepartmentsTab() {
 
   const getMyDepartments = async () => {
     let res = await getDepartment();
-    let { valid, data } = res;
-    if (valid) {
-      setDepartments(data);
-    }
+    let data = res;    
+      setDepartments(data);    
   };
 
   /**

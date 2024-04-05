@@ -285,26 +285,16 @@ function PositionsTab() {
     }
   };
   const getMyFunctions = async () => {
-    let res = await getFunction();
-    let { valid, data } = res;
-    if (valid) {
-      setFunctions(data);
-    }
+    let res = await getFunction();        
+      setFunctions(res);    
   };
   const getMyRoles = async () => {
-    let res = await getRole();
-    let { valid, data } = res;
-    if (valid) {
-      setRoles(data);
-    }
+    let res = await getRole();    
+      setRoles(res);    
   };
   const getMyPositions = async () => {
-    let res = await getPosition();
-    let { valid, data } = res;
-    if (valid) {
-      setPositions(data);
-      console.log('Data....', data);
-    }
+    let res = await getPosition();        
+      setPositions(res);        
   };
 
   const changeAttatchment = React.useRef(null);
