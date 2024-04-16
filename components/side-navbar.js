@@ -118,9 +118,9 @@ function SideNavbar({ dashboard, headcount, talent, scheduling, settings }) {
         <div className='space-y-6 mb-5 sticky inset-0'>
           {/* Logo */}
           {open ? (
-            <div className='w-full flex justify-center relative h-auto min-h-[41px]'>
-              <img  src='/images/crowd-work-horizontal-logo.png' />
-              
+            <div className='w-full flex justify-center relative items-center gap-x-2'>              
+              <img  src='/images/short-logo.png' className='h-10' />
+              <p className='font-bold text-white'>We<span className='font-medium'>Work</span></p>
             </div>
           ) : (
             <div className='w-full flex justify-center relative h-auto min-h-[41px]'>
